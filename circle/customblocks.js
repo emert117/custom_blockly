@@ -4,8 +4,8 @@
 Blockly.Blocks['lightswitch'] = {
     init: function() {
         this.appendDummyInput()
-            .appendField("Turn")
-            .appendField(new Blockly.FieldDropdown([["red","R"]]), "lightcolor")
+            .appendField("Renk Ayarı")
+            .appendField(new Blockly.FieldDropdown([["red","R"], ["green", "G"]]), "lightcolor")
             .appendField(new Blockly.FieldDropdown([["on","on"], ["off", "off"]]), "switch");
         this.setInputsInline(false);
         this.setPreviousStatement(true, null);
@@ -21,7 +21,12 @@ Blockly.JavaScript['lightswitch'] = function(block) {
     var dropdown_lightcolor = block.getFieldValue('lightcolor');
     var dropdown_switch = block.getFieldValue('switch');
     if (dropdown_switch == "on") {
-        var code = "document.getElementById('circle').style.backgroundColor='red';"
+        if (dropdown_lightcolor == "R") {
+            var code = "document.getElementById('circle').style.backgroundColor='red';"
+        }
+        if (dropdown_lightcolor == "G") {
+            var code = "document.getElementById('circle').style.backgroundColor='green';"
+        }
     }
     if (dropdown_switch == "off") {
         var code = "document.getElementById('circle').style.backgroundColor='white';"
