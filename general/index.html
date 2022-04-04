@@ -23,13 +23,14 @@
   <script src="files/prettify_compiled.js"></script>
   <link href="files/devsite-cyan.css" rel="stylesheet"></script>
   <link href="files/blockly-demo.css" rel="stylesheet">
+  <link href="files/mycustom.css" rel="stylesheet">
 </head>
 <body>
 <div class="app-container">
   <div id="blocklyDiv" class="main blockly-panel"></div>
   <div id="codeDiv" class="main output-panel">
     <div class="dropdown-bar">
-      Language:
+      Dil:
       <div id="im-just-an-underline">
         <select id="languageDropdown" onChange="myUpdateFunction();">
           <option value="JavaScript">JavaScript</option>
@@ -44,10 +45,11 @@
     <pre translate="no" dir="ltr"></pre>
   </div>
   <div id="playButton" class="play-button material-icons" aria-hidden="true" translate="no">play_arrow</div>
+  <div id="bilisimButton" class="bilisim-button" aria-hidden="true" translate="no">Bilişim School</div>
 </div>
 
 <xml id="toolbox" style="display: none">
-    <category id="catLogic" colour="210" name="Logic">
+    <category id="catLogic" colour="210" name="Mantık">
       <block type="controls_if"></block>
       <block type="logic_compare"></block>
       <block type="logic_operation"></block>
@@ -56,7 +58,7 @@
       <block type="logic_null"></block>
       <block type="logic_ternary"></block>
     </category>
-    <category id="catLoops" colour="120" name="Loops">
+    <category id="catLoops" colour="120" name="Döngüler">
       <block type="controls_repeat_ext">
         <value name="TIMES">
           <shadow type="math_number">
@@ -85,7 +87,7 @@
       <block type="controls_forEach"></block>
       <block type="controls_flow_statements"></block>
     </category>
-    <category id="catMath" colour="230" name="Math">
+    <category id="catMath" colour="230" name="Matematik">
       <block type="math_number"></block>
       <block type="math_arithmetic">
         <value name="A">
@@ -179,7 +181,7 @@
       </block>
       <block type="math_random_float"></block>
     </category>
-    <category id="catText" colour="160" name="Text">
+    <category id="catText" colour="160" name="Metin">
       <block type="text"></block>
       <block type="text_join"></block>
       <block type="text_append">
@@ -256,7 +258,7 @@
         </value>
       </block>
     </category>
-    <category id="catLists" colour="260" name="Lists">
+    <category id="catLists" colour="260" name="Listeler">
       <block type="lists_create_with">
         <mutation items="0"></mutation>
       </block>
@@ -307,7 +309,7 @@
       </block>
       <block type="lists_sort"></block>
     </category>
-    <category id="catColour" colour="20" name="Color">
+    <category id="catColour" colour="20" name="Renkler">
       <block type="colour_picker"></block>
       <block type="colour_random"></block>
       <block type="colour_rgb">
@@ -346,12 +348,12 @@
       </block>
     </category>
     <sep></sep>
-    <category id="catVariables" colour="330" custom="VARIABLE" name="Variables"></category>
-    <category id="catFunctions" colour="290" custom="PROCEDURE" name="Functions"></category>
+    <category id="catVariables" colour="330" custom="VARIABLE" name="Değişkenler"></category>
+    <category id="catFunctions" colour="290" custom="PROCEDURE" name="Fonksiyonlar"></category>
   </xml>
 <xml id="blocklyDefault" style="display: none">
   <block type="variables_set">
-    <field name="VAR">Count</field>
+    <field name="VAR">Sayac</field>
     <value name="VALUE">
       <block type="math_number">
         <field name="NUM">1</field>
@@ -365,7 +367,7 @@
             <field name="OP">LTE</field>
             <value name="A">
               <block type="variables_get">
-                <field name="VAR">Count</field>
+                <field name="VAR">Sayac</field>
               </block>
             </value>
             <value name="B">
@@ -379,18 +381,18 @@
           <block type="text_print">
             <value name="TEXT">
               <block type="text">
-                <field name="TEXT">Hello World!</field>
+                <field name="TEXT">Merhaba Dünya!</field>
               </block>
             </value>
             <next>
               <block type="variables_set">
-              <field name="VAR">Count</field>
+              <field name="VAR">Sayac</field>
                 <value name="VALUE">
                   <block type="math_arithmetic">
                   <field name="OP">ADD</field>
                     <value name="A">
                       <block type="variables_get">
-                        <field name="VAR">Count</field>
+                        <field name="VAR">Sayac</field>
                       </block>
                     </value>
                     <value name="B">
