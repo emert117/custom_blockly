@@ -1,55 +1,28 @@
-
 <!doctype html>
-<html lang="en"
-      dir="ltr">
-  
-<!-- Mirrored from developers-dot-devsite-v2-prod.appspot.com/blockly/blockly-demo/blockly-demo by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Apr 2022 08:14:13 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<html lang="en" dir="ltr">
 <head>
-    <title>Google Developers</title>
-    <meta name="robots" content="noindex">
+    <title>Bloklarla Öğreniyorum - Bilişim School</title>
     <meta charset="utf-8">
     <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="iframe" content="standalone">
-    
-    
-    <script nonce="P6FZFQyiy5Lw9hQkfG+h4nXKFN4ZXO">
-      (function(){
-        window.framebox=window.framebox||function(){(window.framebox.q=window.framebox.q||[]).push(arguments)};
-        
-        var a={},b=function(){(window.framebox.dq=window.framebox.dq||[]).push(arguments)};
-        ['getUrl','handleLinkClicksInParent','initAutoSize','navigate','pushState','replaceState',
-         'requestQueryAndFragment','sendEvent','updateSize'].forEach(function(x){a[x]=function(){
-          b(x,arguments)}});
-        window.devsite={framebox:{AutoSizeClient:a}};
-      })();
-      
-      (function(d,e,v,s,i,t,E){d['GoogleDevelopersObject']=i;
-        t=e.createElement(v);t.async=1;t.src=s;E=e.getElementsByTagName(v)[0];
-        E.parentNode.insertBefore(t,E);})(window, document, 'script',
-        'https://www.gstatic.com/devrel-devsite/prod/v60a82f989527785dbe37a03a591468114489a6d17469fe0c9f3dbd5a48c1b36c/developers/js/app_loader.js', '[1,"en",null,"https://developers-dot-devsite-v2-prod.appspot.com/js/devsite_app_module.js","https://www.gstatic.com/devrel-devsite/prod/v60a82f989527785dbe37a03a591468114489a6d17469fe0c9f3dbd5a48c1b36c","https://www.gstatic.com/devrel-devsite/prod/v60a82f989527785dbe37a03a591468114489a6d17469fe0c9f3dbd5a48c1b36c/developers","https://developers-dot-devsite-v2-prod.appspot.com/",null,1,null,1,null,[1,6,8,12,14,17,18,21,25,40,50,63,70,75,76,80,87,91,92,93,97,98,100,101,102,103,104,105,107,108,109,110,111,112,113,115,117,118,120,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,138,140,141,144,147,148,149,150,151,152,153,154,155,156,157,159,161,163,164,165,168,169,170,173,179,182,186,191],"AIzaSyAP-jjEJBzmIyKR4F-3XITp8yM9T1gEEI8","AIzaSyB6xiKGDR5O3Ak2okS4rLkauxGUG7XP0hg","developers.google.com","AIzaSyAQk0fBONSGUqCNznf6Krs82Ap1-NV6J4o","AIzaSyCCxcqdrZ_7QMeLCRY20bh_SXdAYqy70KY"]')
-      
-      </script>
-    
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
   </head>
-  
-  <body 
-        >
-    <!DOCTYPE html>
+
+<body>
+<!DOCTYPE html>
 <head>
-  <script src="https://blockly-demo.appspot.com/static/blockly_compressed.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/blocks_compressed.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/msg/js/en.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/javascript_compressed.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/python_compressed.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/php_compressed.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/lua_compressed.js"></script>
-  <script src="https://blockly-demo.appspot.com/static/dart_compressed.js"></script>
-  <script src="acorn_interpreter.js"></script>
-  <script src="https://www.gstatic.com/external_hosted/google_code_prettify/prettify_compiled.js"></script>
-  <link href="https://developers.google.com/_static/css/devsite-cyan.css" rel="stylesheet"></script>
-  <link href="https://developers-dot-devsite-v2-prod.appspot.com/blockly/styles/blockly-demo.css" rel="stylesheet">
+  <script src="files/blockly_compressed.js"></script>
+  <script src="files/blocks_compressed.js"></script>
+  <script src="files/tr.js"></script>
+  <script src="files/javascript_compressed.js"></script>
+  <script src="files/python_compressed.js"></script>
+  <script src="files/php_compressed.js"></script>
+  <script src="files/lua_compressed.js"></script>
+  <script src="files/dart_compressed.js"></script>
+  <script src="files/acorn_interpreter.js"></script>
+  <script src="files/prettify_compiled.js"></script>
+  <link href="files/devsite-cyan.css" rel="stylesheet"></script>
+  <link href="files/blockly-demo.css" rel="stylesheet">
 </head>
 <body>
 <div class="app-container">
@@ -434,9 +407,6 @@
       </block>
     </block>
 </xml>
-<div class="">
-  <button type="button">Code</button>
-</div>
 <script>
   var workspace = Blockly.inject('blocklyDiv',
       {toolbox: document.getElementById('toolbox')});
@@ -456,6 +426,7 @@
   workspace.addChangeListener(myUpdateFunction);
   function executeBlockCode() {
     var code = Blockly.JavaScript.workspaceToCode(workspace);
+    //alert(code)
     var initFunc = function(interpreter, scope) {
       var alertWrapper = function(text) {
         text = text ? text.toString() : '';
@@ -485,5 +456,4 @@
 </body>
   </body>
 
-<!-- Mirrored from developers-dot-devsite-v2-prod.appspot.com/blockly/blockly-demo/blockly-demo by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 01 Apr 2022 08:14:14 GMT -->
 </html>
